@@ -118,7 +118,7 @@
     border: 1px solid var(--text-color);
     box-shadow: inherit;
     border-radius: 4px;
-
+}
 @media (max-width: 500px){
     .container{
         display: flex;
