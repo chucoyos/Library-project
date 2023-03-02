@@ -7,8 +7,9 @@
     --bg-color: #dbeafe;
     --text-color: #242424;
     --font-size: 16px;
-    --card-bg-color: #f5f0f0;
-    --card-text-color: #444444;
+    --card-bg-color: #673AB7;
+    --card-text-color: #FFFFFF;
+    --card-accent-color: #536DFE;
 }
 
 .container{
@@ -23,6 +24,10 @@
     border: 1px solid red;
 }
 .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 20px;
     padding: 40px
 }
 .card {
@@ -34,4 +39,13 @@
     padding: 40px;
     border: 1px solid var(--text-color);
     border-radius: 5%;
+    box-shadow: 5px 7px 8px 0px lightslategray;
+}
+.card button {
+    background-color: var(--card-accent-color);
+    color: #FFFFFF;
+    padding: 8px;
+    border: 1px solid var(--text-color);
+    box-shadow: inherit;
+    border-radius: 4px;
 }
