@@ -7,6 +7,12 @@
     --bg-color: #dbeafe;
     --text-color: #242424;
     --font-size: 16px;
+    --header-color: #881337;
+    --footer-color: #881337;
+    --secondary-color: #fafafa;
+    --transition: ease-in 1s;
+    --font-logo: 'Tilt Warp', cursive;
+    --text-font: 'Roboto Mono', monospace;
     --card-bg-color: #673AB7;
     --card-text-color: #FFFFFF;
     --card-accent-color: #536DFE;
@@ -23,6 +29,70 @@
     background-color: var(--bg-color);
     border: 1px solid red;
 }
+
+.navBar{
+    background-color: var(--header-color);
+    width: 100%;
+    color: var(--secondary-color);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBar > a {
+    text-decoration: none;
+}
+.navBar .logo{
+    color: var(--secondary-color);
+    font-family: var(--font-logo);
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: bold;
+}
+.navBar > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navBar > ul > .item {
+    padding: 10px 20px;
+    margin-right: 7px;
+    list-style: none;
+    position: relative;
+}
+.navBar > ul > .item:last-of-type {
+    margin-right: 0;
+}
+.navBar > ul > .item:hover{
+    background-color: var(--secondary-color);
+    color: var(--header-color);
+}
+.navBar > ul > .item::after{
+    content: "";
+    position: absolute;
+    transition: var(--transition);
+    background-color: var(--header-color);
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+.navBar > ul > .item:hover::after{
+    width: 100%;
+}
+
+.navBar > ul > .item > a:hover{
+    color: var(--header-color);
+}
+
+
+.navBar > ul > .item > a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--text-font);
+    font-weight: bolder;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -48,4 +118,14 @@
     border: 1px solid var(--text-color);
     box-shadow: inherit;
     border-radius: 4px;
+
+@media (max-width: 500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .navBar > ul > .item {
+        padding: 2px 5px;
+        margin-right: 2px;
+    }
 }
