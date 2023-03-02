@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: #dbeafe;
+    --bg-color: #fbcfe8;
     --text-color: #242424;
     --font-size: 16px;
     --header-color: #881337;
@@ -27,7 +27,7 @@
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--bg-color);
-    border: 1px solid red;
+    position: relative;
 }
 
 .navBar{
@@ -118,6 +118,21 @@
     border: 1px solid var(--text-color);
     box-shadow: inherit;
     border-radius: 4px;
+}
+
+
+
+.footer{
+    background-color: var(--footer-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.bold{
+    font-weight: 800;
 }
 @media (max-width: 500px){
     .container{
