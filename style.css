@@ -13,9 +13,10 @@
     --transition: ease-in 1s;
     --font-logo: 'Tilt Warp', cursive;
     --text-font: 'Roboto Mono', monospace;
-    --card-bg-color: #673AB7;
-    --card-text-color: #FFFFFF;
-    --card-accent-color: #536DFE;
+    --card-bg-color: #881337;
+    --card-text-color: #FCE9EE;
+    --card-accent-color: #FCE9EE;
+    --card-border-color: #F2A6BD;
 }
 
 .container{
@@ -96,9 +97,10 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
+    justify-content: center;
     gap: 20px;
-    padding: 40px
+    padding: 40px;
+    margin: 60px;
 }
 .card {
     background-color: var(--card-bg-color);
@@ -109,14 +111,15 @@
     padding: 40px;
     border: 1px solid var(--text-color);
     border-radius: 5%;
-    box-shadow: 5px 7px 8px 0px lightslategray;
+    box-shadow: 5px 7px 8px 0px lightslategrey;
 }
 .card button {
-    background-color: var(--card-accent-color);
-    color: #FFFFFF;
+    background-color: var(--bg-color);
+    color: #030303;
+    font-weight: bold;
     padding: 8px;
     border: 1px solid var(--text-color);
-    box-shadow: inherit;
+    box-shadow: 2px 2px 0px 0px;
     border-radius: 4px;
 }
 
