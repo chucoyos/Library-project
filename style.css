@@ -134,6 +134,12 @@
     font-weight: bold;
     padding: 8px;
 }
+.read:hover, .remove:hover {
+    background-color: var(--card-text-color);
+    color: var(--card-accent-color);
+    border: 1px solid var(--card-accent-color);
+    cursor: pointer;
+}
 
 
 
