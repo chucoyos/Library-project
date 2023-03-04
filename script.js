@@ -1,9 +1,9 @@
 let myLibrary = [
   { author: 'author1', title: 'Title1', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
-  { author: 'author1', title: 'Title1', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
-  { author: 'author1', title: 'Title1', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
-  { author: 'author1', title: 'Title1', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
-  { author: 'author1', title: 'Title1', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
+  { author: 'author2', title: 'Title2', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
+  { author: 'author3', title: 'Title3', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
+  { author: 'author4', title: 'Title4', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
+  { author: 'author5', title: 'Title5', description: 'description1', num_of_pages: 100, book_id: 1, is_read: false },
 ]
 
 function Book(author, title, description, num_of_pages, book_id, is_read) {
@@ -40,6 +40,21 @@ function ShowBooks() {
     btn_container.classList.add('button-container')
     btn_read.classList.add('read')
     btn_remove.classList.add('remove')
+    btn_remove.addEventListener('click', () => {
+      btn_remove.parentElement.parentElement.animate([
+        // keyframes
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-100%)', opacity: 0 }
+      ], {
+        // timing options
+        duration: 600,
+        iterations: 1,
+      })
+      setTimeout(() => {
+      btn_remove.parentElement.parentElement.remove()
+      myLibrary.splice(myLibrary.indexOf(book), 1)
+      }, 500)
+    })
     cardContainer.appendChild(card)
     for (let property in book) {
       card.appendChild(title)
@@ -55,9 +70,9 @@ function ShowBooks() {
       btn_container.appendChild(btn_remove)
       btn_read.innerHTML = 'Read'
       btn_remove.innerHTML = 'Remove'
-      // tit.innerHTML = `${book[property]}`;
     }
   }
+  
 }
 
 ShowBooks()
