@@ -116,7 +116,14 @@
     justify-items: center;
     padding: 40px;
 }
-.card button {
+.button-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.read, .remove {
     border: 1px solid rgba(12, 1, 47, 0.18);
     background-color: var(--card-accent-color);
     border-radius: 8px;
