@@ -39,6 +39,15 @@ function ShowBooks() {
     num_of_pages.classList.add('pages')
     btn_container.classList.add('button-container')
     btn_read.classList.add('read')
+    btn_read.addEventListener('click', () => {
+      if (book.is_read === false) {
+        book.is_read = true
+        btn_read.classList.add('read-true')
+      } else {
+        book.is_read = false
+        btn_read.classList.remove('read-true')
+      }
+    })
     btn_remove.classList.add('remove')
     btn_remove.addEventListener('click', () => {
       btn_remove.parentElement.parentElement.animate([
