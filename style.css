@@ -140,7 +140,10 @@
     border: 1px solid var(--card-accent-color);
     cursor: pointer;
 }
-
+.read-true {
+    text-decoration: line-through;
+    background-color: var(--footer-color);
+}
 
 
 .footer{
