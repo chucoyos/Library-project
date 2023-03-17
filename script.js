@@ -211,8 +211,8 @@ function addToView() {
   btn_remove.innerHTML = 'Remove'
   btn_show.innerHTML = 'Show'
   title.innerHTML = `${myLibrary[myLibrary.length - 1].title}`
-  author.innerHTML = `Author: ${myLibrary[myLibrary.length - 1].author}`
-  description.innerHTML = `Description: ${myLibrary[myLibrary.length - 1].description}`
+  author.innerHTML = `${myLibrary[myLibrary.length - 1].author}`
+  description.innerHTML = `${myLibrary[myLibrary.length - 1].description}`
   num_of_pages.innerHTML = `Pages: ${myLibrary[myLibrary.length - 1].num_of_pages}`
   btn_read.addEventListener('click', () => {
     if (myLibrary[myLibrary.length - 1].is_read === false) {
